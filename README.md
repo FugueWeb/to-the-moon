@@ -14,3 +14,6 @@ the <audio> tag.
 
 This application works in Chrome and Firefox only. If another browser is used,
 the user is directed to change browsers.
+
+View demo at http://www.fugueweb.com/dev/web/one-day
+
