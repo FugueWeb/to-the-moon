@@ -9,8 +9,8 @@ depending on how close to zero the countdown is.
 I've included various console.log statements you can use to calculate what
 time you would like to countdown from. When the time reaches zero, the rocket
 lands on the moon and a button appears that links to wherever. To include
-a musical track, include that file in /music and change the path inside
-the <audio> tag.
+a musical track, create a folder called /music and change the path inside
+the audio tag in index.html. The music will autoplay onload, except on mobile devices.
 
 This application works in Chrome and Firefox only. If another browser is used,
 the user is directed to change browsers.
