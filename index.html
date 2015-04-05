@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>One Day</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+    <link href="styles.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <div class="space">
+      <div class="moon"></div>
+      <div class="flight">
+        <div class="line"></div>
+        <div class="path">
+          <div class="rocket">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <!-- The big reveal. Show at launch time. -->
+      <div class="popup" style="display:none;">
+        <a href="http://fugueweb.com" target="_blank" class="btn">One Day...</a>
+      </div>
+      <!-- <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="display:none;">Wedding time!</a> -->
+    </div>
+    <div id="timer">
+      <table>
+        <thead>
+          <tr>
+            <td><span id="days"></span></td>
+            <td><span id="hours"></span></td>
+            <td><span id="minutes"></span></td>
+            <td><span id="seconds"></span></td>
+            <td><span id="centiseconds"></span></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>days</td>
+            <td>hours</td>
+            <td>minutes</td>
+            <td>seconds</td>
+            <td>centiseconds</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="viewing">
+      <span id="viewer_count"></span>
+    </div>
+    <div id="comm" class="comm" style="display:none;">
+      <div class="operator"></div>
+      <div class="text"></div>
+    </div>
+    <div class="music playing" >
+      <a href="#">
+        <span class="plus">+</span>
+        <span class="minus">-</span>
+        Music
+      </a>
+    </div>
+    <audio id="themesong" controls autoplay style="display:none;">
+      <source src="music/One_day.mp3" type="audio/mpeg">
+    </audio>
+
+  </body>
+  <script>
+
+    //Set the two dates
+    today=new Date()
+    var futureDate=new Date(today.getFullYear(), 4, 24) //Month is 0-11 in JavaScript
+    if (today.getMonth()==11 && today.getDate()>24) //if futureDate has passed already
+    futureDate.setFullYear(futureDate.getFullYear()+1) //calculate next year's futureDate
+    //Set 1 day in milliseconds
+    var one_day=1000*60*60*24
+
+    var pkey = "057b12fc5917720115c1";
+    var landing_time =  today.getTime() + 221000;
+
+    //Calculate difference btw the two dates, and convert to days
+    //one day = 3:53 = 233000 milliseconds less 12 seconds
+    //console.log(today.getTime() + 233000);
+
+    //console.log(futureDate.getTime())
+    //console.log(Math.ceil((futureDate.getTime()-today.getTime())/(one_day))+ " days left!")
+  </script>
+  <script src="script.js" type="text/javascript"></script>
+</html>
+<!-- project moonbase -->
