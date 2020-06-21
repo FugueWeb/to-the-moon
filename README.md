@@ -12,8 +12,10 @@ lands on the moon and a button appears that links to wherever. To include
 a musical track, create a folder called /music and change the path inside
 the audio tag in index.html. The music will autoplay onload, except on mobile devices.
 
-This application works in Chrome and Firefox only. If another browser is used,
-the user is directed to change browsers.
+## Note
 
-View demo at http://www.fugueweb.com/dev/web/one-day
+This application works in Chrome, Brave, and Firefox. If another browser is used,
+the user is directed to change browsers. Be sure to check that any adblockers you have installed are not blocking some of the javascript.
+
+View demo at https://fugueweb.com/dev/moon
 
